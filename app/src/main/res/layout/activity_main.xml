@@ -1,28 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="#E0F7FA">
 
-    <Button
-        android:id="@+id/btnPantalla1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ir a Pantalla 1" />
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnPantalla2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ir a Pantalla 2"
-        android:layout_marginTop="16dp" />
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proyecto Final"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#00695C"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnPantalla3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ir a Pantalla 3"
-        android:layout_marginTop="16dp" />
-</LinearLayout>
+        <!-- Lista de nombres -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Andrea Carrera"
+            android:textColor="#004D40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Luis Montenegro"
+            android:textColor="#004D40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Adriana Solanilla"
+            android:textColor="#004D40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Kidian Jorge"
+            android:textColor="#004D40"
+            android:textSize="18sp"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Subtítulo de menú -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menú"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón Sensor de Luz -->
+        <Button
+            android:id="@+id/btnPantalla1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sensor de Luz"
+            android:backgroundTint="#26A69A"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- Botón Sensor PickUp -->
+        <Button
+            android:id="@+id/btnPantalla2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sensor PickUp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#26A69A"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- Botón Pare para niños -->
+        <Button
+            android:id="@+id/btnPantalla3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pareo para niños"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#26A69A"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
