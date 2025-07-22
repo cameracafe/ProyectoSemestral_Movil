@@ -1,24 +1,29 @@
 package com.example.proyectofinal_movil;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Button btnAbrirSensor;
+    Button btnPantalla1, btnPantalla2, btnPantalla3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Nuevo layout simple
+        setContentView(R.layout.activity_main);
 
-        btnAbrirSensor = findViewById(R.id.btnAbrirSensor);
+        btnPantalla1 = findViewById(R.id.btnPantalla1);
+        btnPantalla2 = findViewById(R.id.btnPantalla2);
+        btnPantalla3 = findViewById(R.id.btnPantalla3);
 
-        btnAbrirSensor.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, SensorLuz.class);
-            startActivity(intent);
-        });
+        btnPantalla1.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, SensorLuz.class)));
+
+        btnPantalla2.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, SensorPickUp.class)));
+
+
     }
 }

@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/inicioLayout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FAFAFA">
+    android:padding="16dp">
 
     <Button
-        android:id="@+id/btnAbrirSensor"
+        android:id="@+id/btnPantalla1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abrir Sensor de Luz"
-        android:textSize="18sp"
-        android:layout_centerInParent="true"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"
-        android:padding="12dp"/>
-</RelativeLayout>
+        android:text="Ir a Pantalla 1" />
+
+    <Button
+        android:id="@+id/btnPantalla2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a Pantalla 2"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnPantalla3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a Pantalla 3"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
