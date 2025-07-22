@@ -6,22 +6,22 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="24dp">
 
-        <!-- Título -->
+        <!-- Título principal -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Proyecto Final"
-            android:textSize="28sp"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#00796B"
-            android:layout_marginBottom="24dp" />
+            android:textColor="#00695C"
+            android:layout_marginBottom="16dp" />
 
-        <!-- Nombres fijos -->
+        <!-- Lista de nombres -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,36 +46,54 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
             android:text="• Kidian Jorge"
             android:textColor="#004D40"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_marginBottom="28dp" />
 
-        <!-- Botones -->
+        <!-- Subtítulo de menú -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menú"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botón Sensor de Luz -->
         <Button
             android:id="@+id/btnPantalla1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 1"
+            android:text="Sensor de Luz"
             android:backgroundTint="#26A69A"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
 
+        <!-- Botón Sensor PickUp -->
         <Button
             android:id="@+id/btnPantalla2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 2"
+            android:text="Sensor PickUp"
             android:layout_marginTop="16dp"
             android:backgroundTint="#26A69A"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
 
+        <!-- Botón Pare para niños -->
         <Button
             android:id="@+id/btnPantalla3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ir a Pantalla 3"
+            android:text="Pareo para niños"
             android:layout_marginTop="16dp"
             android:backgroundTint="#26A69A"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>
