@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0F7FA">
+    android:background="@drawable/fondo_degradado">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +18,7 @@
             android:text="Proyecto Final"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#00695C"
+            android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp" />
 
         <!-- Lista de nombres -->
@@ -26,28 +26,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="• Andrea Carrera"
-            android:textColor="#004D40"
+            android:textColor="#E1F5FE"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="• Luis Montenegro"
-            android:textColor="#004D40"
+            android:textColor="#E1F5FE"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="• Adriana Solanilla"
-            android:textColor="#004D40"
+            android:textColor="#E1F5FE"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="• Kidian Jorge"
-            android:textColor="#004D40"
+            android:textColor="#E1F5FE"
             android:textSize="18sp"
             android:layout_marginBottom="28dp" />
 
@@ -58,7 +58,7 @@
             android:text="Menú"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="#00796B"
+            android:textColor="#FFFFFF"
             android:layout_marginBottom="20dp" />
 
         <!-- Botón Sensor de Luz -->
@@ -67,10 +67,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sensor de Luz"
-            android:backgroundTint="#26A69A"
+            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
-            android:padding="12dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
 
         <!-- Botón Sensor PickUp -->
         <Button
@@ -78,22 +78,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sensor PickUp"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#26A69A"
+            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
-            android:padding="12dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
 
         <!-- Botón Pare para niños -->
         <Button
             android:id="@+id/btnPantalla3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pareo para niños"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#26A69A"
+            android:text="Pare para niños"
+            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
-            android:padding="12dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>
