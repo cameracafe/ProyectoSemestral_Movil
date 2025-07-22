@@ -1,5 +1,5 @@
 package com.example.proyectofinal_movil;
-/*prueba de push2*/
+/*prueba de push3*/
 import android.os.Bundle;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
