@@ -67,9 +67,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sensor de Luz"
-            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
+            android:backgroundTint="#8E24AA"
             android:layout_marginTop="8dp" />
 
         <!-- Botón Sensor PickUp -->
@@ -78,9 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sensor PickUp"
-            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
+            android:backgroundTint="#8E24AA"
             android:layout_marginTop="16dp" />
 
         <!-- Botón Pare para niños -->
@@ -89,9 +89,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pare para niños"
-            android:background="@drawable/btn_estilo"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
+            android:backgroundTint="#8E24AA"
             android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>
