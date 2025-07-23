@@ -30,6 +30,8 @@
 
         <activity android:name=".SensorPickUp">
         </activity>  <!-- Aquí agregamos SensorPickUp -->
+        <activity android:name=".Pareo_activity">
+        </activity>
 
     </application>
 
