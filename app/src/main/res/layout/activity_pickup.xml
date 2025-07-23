@@ -4,14 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@android:color/white"
-    android:id="@+id/layout"> <!-- El id layout para cambiar el color de fondo -->
+    android:background="@drawable/background1"
+    android:id="@+id/layout">
 
-    <!-- ImageView para mostrar la imagen -->
+    <!-- Título -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Sensor PickUp Wake Up"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Este sensor detecta cuando el teléfono es levantado verticalmente y cambia el color de fondo junto con la imagen mostrada."
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="20dp"/>
+
+    <!-- Imagen explicativa -->
+    <ImageView
+        android:id="@+id/explanationImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        android:alpha="20"
+        android:src="@drawable/imagene" />
+
+    <!-- Imagen que aparecerá cuando el teléfono se levante -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mi_imagen" /> <!-- La imagen que se mostrará -->
+        android:src="@drawable/imagene"
+        android:visibility="gone"/>
 
 </LinearLayout>
