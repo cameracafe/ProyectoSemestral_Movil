@@ -3,6 +3,8 @@ package com.example.proyectofinal_movil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
@@ -14,9 +16,7 @@ public class Pareo_activity extends AppCompatActivity {
 
     ImageView sol_img, luna_img, nube_img;
     ImageView amarillo_img, gris_img, celeste_img;
-
     ImageView cuerda_sol, cuerda_luna, cuerda_nube;
-
     TextView celebracion_tv;
     Button volverInicio_btn;
 
@@ -27,7 +27,6 @@ public class Pareo_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pareo);
-
 
         sol_img = findViewById(R.id.sol_img);
         luna_img = findViewById(R.id.luna_img);
@@ -44,17 +43,14 @@ public class Pareo_activity extends AppCompatActivity {
         celebracion_tv = findViewById(R.id.celebración_tv);
         volverInicio_btn = findViewById(R.id.volverinicio_btn);
 
-        // Este bloque es para que me deje seleccionar la imagen que hago click en el lado izquierdo
         sol_img.setOnClickListener(v -> seleccionActual = sol_img);
         luna_img.setOnClickListener(v -> seleccionActual = luna_img);
         nube_img.setOnClickListener(v -> seleccionActual = nube_img);
 
-        // Este bloque es para que me deje seleccionar la imagen de la izquierda y la verifica con las de la derecha para ver si hacen pareja.
         amarillo_img.setOnClickListener(v -> verificarMatch(sol_img, R.id.cuerda_sol));
         gris_img.setOnClickListener(v -> verificarMatch(luna_img, R.id.cuerda_luna));
         celeste_img.setOnClickListener(v -> verificarMatch(nube_img, R.id.cuerda_nube));
 
-        // Configuración del botón que me deja regresar al menú
         volverInicio_btn.setOnClickListener(v -> {
             Intent intent = new Intent(Pareo_activity.this, MainActivity.class);
             startActivity(intent);
@@ -69,14 +65,23 @@ public class Pareo_activity extends AppCompatActivity {
         }
 
         if (seleccionActual == objetoEsperado) {
-            // Mostrar cuerda correspondiente
             ImageView cuerda = findViewById(idCuerda);
             if (cuerda.getVisibility() != View.VISIBLE) {
+                // Animación de la cuerda (fade-in)
+                Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+                cuerda.startAnimation(fadeIn);
                 cuerda.setVisibility(View.VISIBLE);
+
+                // Animación lateral para el objeto seleccionado (shake)
+                Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+                seleccionActual.startAnimation(shake);
+
                 aciertos++;
 
                 if (aciertos == 3) {
                     celebracion_tv.setText("¡FELICIDADES!");
+                    Animation bounce = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+                    celebracion_tv.startAnimation(bounce);
                 }
             }
         } else {
@@ -86,4 +91,3 @@ public class Pareo_activity extends AppCompatActivity {
         seleccionActual = null;
     }
 }
-
