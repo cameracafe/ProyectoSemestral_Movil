@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnPantalla2.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, SensorPickUp.class)));
 
-
+        btnPantalla3.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, Pareo_activity.class)));
     }
 }
