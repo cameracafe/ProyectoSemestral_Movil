@@ -102,3 +102,6 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+}
