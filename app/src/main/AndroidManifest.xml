@@ -27,6 +27,10 @@
 
         <activity android:name=".SensorLuz">
         </activity>
+
+        <activity android:name=".SensorPickUp">
+        </activity>  <!-- Aquí agregamos SensorPickUp -->
+
     </application>
 
 </manifest>
