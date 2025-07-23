@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/pareo_tv"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:background="#FD1818"
+        android:fontFamily="casual"
+        android:text="Pareo "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+
+    <TextView
+        android:id="@+id/descrip_pareo"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:text="Une cada objeto con su color "
+        android:textAlignment="center"
+        android:textColor="#090909"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/pareo_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+
+    <TextView
+        android:id="@+id/objetos_tv"
+        android:layout_width="92dp"
+        android:layout_height="29dp"
+        android:background="#C105A4"
+        android:fontFamily="casual"
+        android:text="Objetos"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/descrip_pareo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/colores_tv"
+        android:layout_width="92dp"
+        android:layout_height="29dp"
+        android:background="#1E9201"
+        android:fontFamily="casual"
+        android:text="Colores"
+        android:textAlignment="center"
+        android:textColor="#FDFBFB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/objetos_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp" />
+
+
+    <ImageView
+        android:id="@+id/sol_img"
+        android:layout_width="132dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/sol"
+        app:layout_constraintTop_toBottomOf="@id/objetos_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/luna_img"
+        android:layout_width="131dp"
+        android:layout_height="115dp"
+        app:srcCompat="@drawable/luna"
+        app:layout_constraintTop_toBottomOf="@id/sol_img"
+        app:layout_constraintStart_toStartOf="@id/sol_img"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/nube_img"
+        android:layout_width="135dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/nube"
+        app:layout_constraintTop_toBottomOf="@id/luna_img"
+        app:layout_constraintStart_toStartOf="@id/luna_img"
+        android:layout_marginTop="16dp" />
+
+
+    <ImageView
+        android:id="@+id/amarillo_img"
+        android:layout_width="138dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/amarillo"
+        app:layout_constraintTop_toTopOf="@id/sol_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp" />
+
+    <ImageView
+        android:id="@+id/gris_img"
+        android:layout_width="140dp"
+        android:layout_height="115dp"
+        app:srcCompat="@drawable/gris"
+        app:layout_constraintTop_toTopOf="@id/luna_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp" />
+
+    <ImageView
+        android:id="@+id/celeste_img"
+        android:layout_width="138dp"
+        android:layout_height="117dp"
+        app:srcCompat="@drawable/celeste"
+        app:layout_constraintTop_toTopOf="@id/nube_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="32dp" />
+
+
+    <ImageView
+        android:id="@+id/cuerda_sol"
+        android:layout_width="102dp"
+        android:layout_height="116dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/match"
+        app:layout_constraintTop_toTopOf="@id/sol_img"
+        app:layout_constraintStart_toEndOf="@id/sol_img" />
+
+    <ImageView
+        android:id="@+id/cuerda_luna"
+        android:layout_width="98dp"
+        android:layout_height="128dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/match1"
+        app:layout_constraintTop_toTopOf="@id/luna_img"
+        app:layout_constraintStart_toEndOf="@id/luna_img" />
+
+    <ImageView
+        android:id="@+id/cuerda_nube"
+        android:layout_width="98dp"
+        android:layout_height="109dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/match2"
+        app:layout_constraintTop_toTopOf="@id/nube_img"
+        app:layout_constraintStart_toEndOf="@id/nube_img" />
+
+
+    <TextView
+        android:id="@+id/celebración_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/volverinicio_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp" />
+
+
+    <Button
+        android:id="@+id/volverinicio_btn"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:text="Inicio"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

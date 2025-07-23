@@ -1,11 +1,13 @@
 package com.example.proyectofinal_movil;
-/*prueba de push3*/
+//Prueba push
+
 import android.os.Bundle;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.hardware.SensorManager;
 import android.view.WindowManager;
 import android.os.Handler;
@@ -16,20 +18,26 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
-    private ImageView imageView;
+    private ImageView imageView, explanationImage;
     private LinearLayout layout;  // Para cambiar el color de fondo
+    private TextView title, description;  // Para el título y la descripción
     private static final float VERTICAL_THRESHOLD = 9.0f;  // Umbral para detectar el levantamiento del teléfono en el eje Y
-    private static final int DISPLAY_TIME = 3000; // Duración de la imagen y fondo (en milisegundos)
+    private static final int DISPLAY_TIME = 2500; // Duración de la imagen y fondo (en milisegundos)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pickup);
 
-        // Inicializar el layout y el ImageView
+        // Inicializar el layout, ImageViews y TextViews
         layout = findViewById(R.id.layout);
         imageView = findViewById(R.id.imageView);
+        explanationImage = findViewById(R.id.explanationImage);
+        title = findViewById(R.id.title);
+        description = findViewById(R.id.description);
+
         imageView.setVisibility(ImageView.GONE);  // Imagen oculta al principio
+        explanationImage.setVisibility(ImageView.VISIBLE);  // Imagen explicativa visible al principio
 
         // Obtener el SensorManager
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -69,10 +77,13 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
 
             // Si el valor de Y es mayor que el umbral, consideramos que el teléfono está en posición vertical
             if (y > VERTICAL_THRESHOLD) {
-                // Cambiar el color de fondo a un color brillante
-                layout.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
+                // Cambiar el fondo a una imagen de fondo diferente
+                layout.setBackgroundResource(R.drawable.background1);
 
-                // Mostrar la imagen
+                // Ocultar la imagen explicativa
+                explanationImage.setVisibility(ImageView.GONE);
+
+                // Mostrar la imagen de cuando el teléfono se levanta
                 imageView.setVisibility(ImageView.VISIBLE);
 
                 // Ejecutar un retraso para mantener la imagen y el fondo por un tiempo antes de restaurar el estado
@@ -80,8 +91,9 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
                     @Override
                     public void run() {
                         // Restaurar el color de fondo a blanco y ocultar la imagen después del retraso
-                        layout.setBackgroundColor(getResources().getColor(android.R.color.white));
+                        layout.setBackgroundResource(R.drawable.background2);  // Fondo normal
                         imageView.setVisibility(ImageView.GONE);
+                        explanationImage.setVisibility(ImageView.VISIBLE);  // Imagen explicativa visible
                     }
                 }, DISPLAY_TIME);  // Duración del retraso en milisegundos (3000ms = 3 segundos)
             }
@@ -90,7 +102,6 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        // Este método se puede dejar vacío si no se necesita hacer nada
+
     }
 }
-
