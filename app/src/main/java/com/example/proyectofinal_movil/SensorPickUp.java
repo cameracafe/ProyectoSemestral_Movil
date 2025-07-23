@@ -27,7 +27,7 @@ public class SensorPickUp extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pickup);
 
         // Inicializar el layout, ImageViews y TextViews
         layout = findViewById(R.id.layout);
